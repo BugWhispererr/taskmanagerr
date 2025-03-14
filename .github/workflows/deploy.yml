@@ -1,0 +1,27 @@
+name: Deploy Backend & Frontend
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy-backend:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v3
+
+      - name: Deploy Backend to Render
+        run: |
+          curl -X POST "https://api.render.com/deploy/srv-XXXXX?key=YOUR_RENDER_API_KEY"
+
+  deploy-frontend:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v3
+
+      - name: Deploy Frontend to Vercel
+        run: |
+          curl -X POST "https://api.vercel.com/v1/integrations/deploy/prj_XXXXX/xxxxx?token=YOUR_VERCEL_API_TOKEN"
