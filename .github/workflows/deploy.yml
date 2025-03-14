@@ -14,7 +14,7 @@ jobs:
 
       - name: Deploy Backend to Render
         run: |
-          curl -X POST "https://api.render.com/deploy/srv-XXXXX?key=YOUR_RENDER_API_KEY"
+          curl -X POST "https://api.render.com/deploy/srv-XXXXX?key=rnd_28b6Wiri2359wCqsqHuwaYzW3FiQ"
 
   deploy-frontend:
     runs-on: ubuntu-latest
@@ -24,4 +24,4 @@ jobs:
 
       - name: Deploy Frontend to Vercel
         run: |
-          curl -X POST "https://api.vercel.com/v1/integrations/deploy/prj_XXXXX/xxxxx?token=YOUR_VERCEL_API_TOKEN"
+          curl -X POST "https://api.vercel.com/v1/integrations/deploy/prj_XXXXX/xxxxx?token=https://api.vercel.com/v1/integrations/deploy/prj_KpG1iddT3sxVAQCvhBjFy42bt74T/3Q3XTdPlWb"
